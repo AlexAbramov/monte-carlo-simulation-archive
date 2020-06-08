@@ -1,0 +1,5 @@
+      open(7,file='se.dat',form='unformatted')
+      read(7)pion,pexi,hestl,hesel,hesil,
+     >	     stot,selas,sexi,sion,
+     >       spelas,spion
+      close(7)

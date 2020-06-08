@@ -4,7 +4,5 @@ Abramov A.A., postgraduate of Rostov-on-Don State University, physical faculty, 
 
 ## Software
 
-Borland CPP version 2.0 or higher used for program compilation
-All *.mak files have path c:\bc45, if you have another path to 
-BC++, correct the path in *.mak files 
+Fortran77
 All programs in this directory for DOS only	

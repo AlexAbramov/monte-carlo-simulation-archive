@@ -1,0 +1,9 @@
+c
+c		Запись массивов сечений в файл.
+c
+      open(unit=7,file='se.dat',status='unknown',
+     >     form='unformatted')
+      write(7)pion,pexi,hestl,hesel,hesil,
+     >	      stot,selas,sexi,sion,
+     >        spelas,spion
+      close(unit=7)

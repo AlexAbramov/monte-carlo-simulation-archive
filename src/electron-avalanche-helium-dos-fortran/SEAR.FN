@@ -1,0 +1,39 @@
+$LARGE
+	implicit integer*2 ( i-n )
+	implicit real*8    ( a-h,o-z )
+	parameter  ( nu=50,nser=500 )
+	parameter  ( nsx=151,nsf=20,nse=200 )
+c--------------------------------------------------------------
+        integer*4  kele,keles,nele
+	real*8     tr,maxf0,rand(15)
+	real*4     xs(nsx),field(nsx)
+c--------------------------------------------------------------
+	real*8     ne(nsx)
+        real*8     e(nsx),ey(nsx),ee(nsx)
+        real*8     v(nsx),vx(nsx),vy(nsx),vd(nsx)
+c--------------------------------------------------------------
+        real*8     sto(nsx),sel(nsx),sex(nsx),sio(nsx)
+        real*8     fto(nsx),fel(nsx),fex(nsx),fio(nsx)
+	real*8     fde(nsx),as(nsx)
+c--------------------------------------------------------------
+        integer*2  numf(nsx)
+        real*8     fre(nsf,nse),mdr(nsf,nse)
+c--------------------------------------------------------------
+	real*4     pion,pexi,hestl,hesel,hesil,
+     >		   stot(0:nser),selas(0:nser),
+     >	           sexi(nser),sion(nser),
+     >             spelas(nu,0:nser),spion(nu,nser)
+c--------------------------------------------------------------
+        common /sech/  pion,pexi,hestl,hesel,hesil,
+     >	               stot,selas,sexi,sion,
+     >                 spelas,spion
+c--------------------------------------------------------------
+	common /tt/ maxf0,  xs,field
+c--------------------------------------------------------------
+	common /rand/ rand
+c--------------------------------------------------------------
+	common /ar/ ne,  e,ey,ee,  v,vx,vy,vd,  
+     >    sto,sel,sex,sio,  fto,fel,fex,fio,  fde,as
+c--------------------------------------------------------------
+	common /arr/  numf,fre,mdr
+c==============================================================

@@ -1,0 +1,24 @@
+с
+c		Инициализация массивов сечений.
+с
+$LARGE
+	integer*4     nexp,nu,nser
+	real*4        emax
+        parameter   ( nexp=1,nu=50,nser=500,emax=5000. )
+	real*4        pion,pexi(nexp),hestl,hesel(nexp),hesil,
+     >		      stot(0:nser),selas(0:nser),
+     >	              sexi(nexp,nser),sion(nser),
+     >                spelas(nu,0:nser),spion(nu,nser)
+        common/sech/  pion,pexi,hestl,hesel,hesil,
+     >	              stot,selas,sexi,sion,
+     >                spelas,spion
+с
+c		pexi - потенциалы возбуждения
+с		pion - потенциал ионизации
+с		stot - суммарное сечение
+c		selas - сечение упругих процессов
+c		spelas - дифференциальное сечение упругих процессов
+c		sexi - сечение возбуждения
+c		sion - сечение ионизации
+c		spion - дифференциальное сечение ионизации
+с

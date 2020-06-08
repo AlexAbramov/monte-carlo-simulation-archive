@@ -1,0 +1,3 @@
+  Март , 94г.   
+  execute.exe 
+  nk=50000 , Lx=5sm. , nsx=151 , nsf=20 , nse=200 .

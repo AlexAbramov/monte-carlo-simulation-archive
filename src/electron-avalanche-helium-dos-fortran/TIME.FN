@@ -1,0 +1,2 @@
+        integer*2  gd_n,md_n,dd_n,h_n,m_n,s_n,hs_n
+	integer*2  gd_k,md_k,dd_k,h_k,m_k,s_k,hs_k
