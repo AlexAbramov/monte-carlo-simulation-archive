@@ -1,0 +1,7 @@
+E [V/sm]
+x [sm]
+v [sqrt(eV)]
+kk*v [10^6 sm/sec]
+e [eV]
+fr,w [10^6 Hz]
+t [10^-6 sec]

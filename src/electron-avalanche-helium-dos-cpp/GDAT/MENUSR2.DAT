@@ -1,0 +1,25 @@
+120 20 320 320 11 9 1 3    - box1_dat
+130 80 310 310 15 7 1 1    - box2_dat
+10 13                     - delta_x, selected_text_color
+10 1                      - text1_size_x, text1_size_y
+( Y )
+10 15                     - text2_size_x, text2_size_y
+field
+vx
+vd
+vr
+v
+ex
+er
+e
+evx
+fto
+fel
+fex
+fio
+alfa
+Выход
+
+
+
+

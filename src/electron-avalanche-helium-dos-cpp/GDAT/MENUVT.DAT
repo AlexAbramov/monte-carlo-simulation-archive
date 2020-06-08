@@ -1,0 +1,10 @@
+20 20 320 320 11 9 1 3    - box1_dat
+30 80 310 310 15 7 1 1    - box2_dat
+10 13                     - delta_x, selected_text_color
+20 1                      - text1_size_x, text1_size_y
+Меню:
+10 4                      - text2_size_x, text2_size_y
+vdr
+enr
+fio
+Выход
