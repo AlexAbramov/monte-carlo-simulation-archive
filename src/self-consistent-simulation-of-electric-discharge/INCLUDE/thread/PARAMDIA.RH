@@ -1,0 +1,13 @@
+#define ID_DIAL	1
+#define ID_DIALOG 234
+#define IDC_C0	17
+#define IDC_DT	18
+#define IDC_GAMMA	16
+#define IDC_RESIST	15
+#define IDC_EDS	14
+#define IDC_YSIZE	11
+#define IDC_XSIZE	10
+#define IDC_LZ	21
+#define IDC_LY	20
+#define IDC_LX	19
+

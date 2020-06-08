@@ -1,8 +1,11 @@
 *.exe
 *.com
+*.dll
 *.doc
 *.gid
 *.obj
 *.dsw
 *.gid
+*.ele
+*.sms
 random.bin

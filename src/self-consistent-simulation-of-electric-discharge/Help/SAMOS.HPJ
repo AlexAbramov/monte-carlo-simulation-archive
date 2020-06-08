@@ -1,0 +1,17 @@
+
+[OPTIONS]
+ERRORLOG=SAMOS.ERR
+COMPRESS=HIGH
+CONTENTS=__Contents_
+TITLE=Self-Consistent Model of Helium Discharge
+CITATION=Alexander Abramov
+COPYRIGHT=(C) 1997-2001
+OLDKEYPHRASE=NO
+[WINDOWS]
+main=,,0,,(230,255,255),0
+
+[FILES]
+SAMOS.RTF
+
+[MAP]
+#include <CONTEXT.H>
