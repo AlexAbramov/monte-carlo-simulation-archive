@@ -1,0 +1,6 @@
+#include "mychild.rh"
+
+AccHelp ACCELERATORS
+{
+ VK_F1, CM_HELP, VIRTKEY
+}

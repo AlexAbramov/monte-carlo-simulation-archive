@@ -1,0 +1,3 @@
+-1	- the number of emited electrons (if the value is less than 1 - the automatical count option will be disabled)
+10.	- the increment for electrical field
+100.	- the maximal value of electrical field

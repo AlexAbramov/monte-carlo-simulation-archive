@@ -1,0 +1,2 @@
+#define ID_MENU 100
+#define CM_CREATE 101

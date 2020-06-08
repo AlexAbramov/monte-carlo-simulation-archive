@@ -1,0 +1,16 @@
+#include "testgr.rh"
+
+COMMANDS MENU
+{
+
+ POPUP "&Edit"
+ {
+  MENUITEM "Edit", CM_EDIT
+ }
+
+ POPUP "&View"
+ {
+  MENUITEM "View", CM_VIEW
+ }
+
+}

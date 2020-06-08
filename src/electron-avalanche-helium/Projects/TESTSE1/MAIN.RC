@@ -1,0 +1,13 @@
+#include <owl\window.rh>
+#include "main.rh"
+
+ID_MENU MENU
+{
+ POPUP "&Sequations"
+ {
+  MENUITEM "Elastic", CM_ELASTIC
+  MENUITEM "Excited", CM_EXCITED
+  MENUITEM "Ionising", CM_IONISING
+  MENUITEM "Exit", CM_EXIT
+ }
+}

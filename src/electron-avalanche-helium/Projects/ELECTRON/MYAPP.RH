@@ -1,0 +1,39 @@
+#define IDC_PUSHBUTTON1	102
+#define CM_ELECTRON	11
+#define CM_FIELD		12
+#define CM_TEXT	   13
+
+#define CM_DENSITY	101
+#define CM_VEL			102
+#define CM_VDR			103
+#define CM_ENERGY		104
+#define CM_ER			105
+#define CM_EVX			106
+#define CM_EE			107
+#define CM_FEL			108
+#define CM_FEX			109
+#define CM_FIO			110
+
+#define CM_FRE			201
+#define CM_FRE1 		202
+#define CM_LEFT 		203
+#define CM_RIGHT 		204
+#define CM_SET 		205
+
+#define CM_STEP		301
+#define CM_RUN	      302
+#define CM_STOP      303
+
+#define CM_ABOUT		401
+#define CM_CONTENTS	402
+#define CM_CONTEXT	403
+
+#define ID_TIMER     500
+#define TIMER_RATE   100
+
+#include <owl\editfile.rh>
+#include <owl\window.rh>
+#include <owl\mdi.rh>
+#include <owl\statusba.rh>
+
+

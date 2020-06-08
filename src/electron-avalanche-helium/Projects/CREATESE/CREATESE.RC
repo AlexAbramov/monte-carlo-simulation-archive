@@ -1,0 +1,11 @@
+#include <owl\window.rh>
+#include "createse.rh"
+
+ID_MENU MENU
+{
+ POPUP "&File"
+ {
+  MENUITEM "Create", CM_CREATE
+  MENUITEM "Exit", CM_EXIT
+ }
+}

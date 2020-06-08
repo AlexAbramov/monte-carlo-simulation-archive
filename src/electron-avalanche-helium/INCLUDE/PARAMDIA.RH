@@ -1,0 +1,12 @@
+#define ID_DIALOG 234
+#define IDC_DK	15
+#define IDC_VOLTAGE	14
+#define IDC_YSIZE	11
+#define IDC_DE	13
+#define IDC_ESIZE	16
+#define IDC_XEM	17
+#define IDC_FD	12
+#define IDC_XSIZE	10
+#define IDC_LY	20
+#define IDC_LX	19
+//#define IDHELP	998

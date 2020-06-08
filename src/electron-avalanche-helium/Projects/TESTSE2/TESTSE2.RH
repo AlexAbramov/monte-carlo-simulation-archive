@@ -1,0 +1,11 @@
+#define ID_MENU 100
+#define CM_SELAS 101
+#define CM_SEX 102
+#define CM_SION 103
+#define CM_STOT 104
+#define CM_FTOT 105
+#define CM_SPELAS 106
+#define CM_SPEX 107
+#define CM_SPION 108
+#define CM_FTOT1 109
+

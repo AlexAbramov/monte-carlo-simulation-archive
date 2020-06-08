@@ -1,0 +1,14 @@
+#include "testrand.rh"
+
+COMMANDS MENU
+{
+
+ POPUP "&Test"
+ {
+  MENUITEM "Test", CM_TEST
+ }
+
+}
+
+MyBitmap BITMAP "test.bmp"
+

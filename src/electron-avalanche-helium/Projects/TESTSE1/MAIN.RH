@@ -1,0 +1,5 @@
+#define ID_MENU 100
+#define CM_ELASTIC 101
+#define CM_EXCITED 102
+#define CM_IONISING 103
+

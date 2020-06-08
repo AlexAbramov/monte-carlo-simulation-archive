@@ -1,0 +1,212 @@
+#include "myapp.rh"
+
+Menu1 MENU
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New", CM_FILENEW
+  MENUITEM "&Open...", CM_FILEOPEN
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit\tAlt+F4", CM_EXIT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Help"
+ {
+  MENUITEM "&Contents", CM_CONTENTS
+  MENUITEM "&About", CM_ABOUT
+ }
+}
+
+Menu2 MENU
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New", CM_FILENEW
+  MENUITEM "&Open...", CM_FILEOPEN
+  MENUITEM "&Save", CM_FILESAVE
+  MENUITEM "Save &As...", CM_FILESAVEAS
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit\tAlt+F4", CM_EXIT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Visual"
+ {
+  MENUITEM "&Electron tracks", CM_ELECTRON
+  MENUITEM "Electric &field", CM_FIELD
+  MENUITEM "&Parameters", CM_TEXT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Window"
+ {
+  MENUITEM "&Cascade", CM_CASCADECHILDREN
+  MENUITEM "&Tile", CM_TILECHILDREN
+  MENUITEM "Arrange &Icons", CM_ARRANGEICONS
+  MENUITEM "C&lose All", CM_CLOSECHILDREN
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Evolution"
+ {
+  MENUITEM "S&tep", CM_STEP
+  MENUITEM "&Run", CM_RUN
+  MENUITEM "&Stop", CM_STOP
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Help"
+ {
+  MENUITEM "&Contents", CM_CONTENTS
+  MENUITEM "&About", CM_ABOUT
+ }
+}
+
+Menu MENU
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New", CM_FILENEW
+  MENUITEM "&Open...", CM_FILEOPEN
+  MENUITEM "&Save", CM_FILESAVE
+  MENUITEM "Save &As...", CM_FILESAVEAS
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit\tAlt+F4", CM_EXIT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Visual"
+ {
+  MENUITEM "&Electron tracks", CM_ELECTRON
+  MENUITEM "Electric &field", CM_FIELD
+  MENUITEM "&Parameters", CM_TEXT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "Statisti&cs"
+ {
+  MENUITEM "Electronic &density", CM_DENSITY
+  MENUITEM "Vel&ocity", CM_VEL
+  MENUITEM "Dri&ft velocity", CM_VDR
+  MENUITEM "E&nergy", CM_ENERGY
+  MENUITEM "&Radial energy", CM_ER
+  MENUITEM "<e*&vx>", CM_EVX
+  MENUITEM "<e*&e>", CM_EE
+  MENUITEM "E&lastic frequency", CM_FEL
+  MENUITEM "E&xcited frequency", CM_FEX
+  MENUITEM "&Ionized frequency", CM_FIO
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Distribution"
+ {
+  MENUITEM "f(e,&x)", CM_FRE
+  MENUITEM "f(&e)", CM_FRE1
+  MENUITEM "In&crease x", CM_RIGHT
+  MENUITEM "&Set x", CM_SET
+  MENUITEM "&Decrease x", CM_LEFT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Window"
+ {
+  MENUITEM "&Cascade", CM_CASCADECHILDREN
+  MENUITEM "&Tile", CM_TILECHILDREN
+  MENUITEM "Arrange &Icons", CM_ARRANGEICONS
+  MENUITEM "C&lose All", CM_CLOSECHILDREN
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Evolution"
+ {
+  MENUITEM "S&tep", CM_STEP
+  MENUITEM "&Run", CM_RUN
+  MENUITEM "&Stop", CM_STOP
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Help"
+ {
+  MENUITEM "&Contents", CM_CONTENTS
+  MENUITEM "&About", CM_ABOUT
+ }
+}
+
+CM_FILENEW BITMAP "res\\new.bmp"
+CM_FILEOPEN BITMAP "res\\open.bmp"
+CM_FILESAVE BITMAP "res\\save.bmp"
+CM_STEP BITMAP "res\\step.bmp"
+CM_RUN BITMAP "res\\run.bmp"
+CM_STOP BITMAP "res\\stop.bmp"
+CM_LEFT BITMAP "res\\left.bmp"
+CM_RIGHT BITMAP "res\\right.bmp"
+CM_SET BITMAP "res\\set.bmp"
+
+Doc ICON "res\\mdichild.ico"
+App ICON "res\\myapp.ico"
+
+About DIALOG 14, 18, 174, 102
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About Electron Avalanches in Helium Discharge"
+{
+ DEFPUSHBUTTON "Ok", IDOK, 62, 83, 50, 14
+ ICON "App", -1, 79, 4, 16, 16
+ LTEXT "Web: http://www.rsu.ru/~aabramov", -1, 4, 56, 166, 8
+ GROUPBOX "", IDC_PUSHBUTTON1, 2, 20, 170, 58, BS_GROUPBOX
+ LTEXT "Electron Avalanches in Helium Discharge", -1, 4, 26, 166, 8
+ LTEXT "Version 1.2, 32 bit", -1, 4, 36, 166, 8
+ LTEXT "Copyright (C) 1997-2001 Alexander Abramov", -1, 4, 46, 166, 8
+ LTEXT "EMail: aabramov@rsu.ru", -1, 4, 66, 166, 8
+}
+
+STRINGTABLE
+{
+ CM_FILENEW, "Create a new document"
+ CM_FILEOPEN, "Open an existing document"
+ CM_FILESAVE, "Save this document"
+ CM_FILESAVEAS, "Save this document under a new name"
+ CM_EXIT, "Exit this application"
+ CM_CASCADECHILDREN, "Cascade open windows"
+ CM_TILECHILDREN, "Tile open windows"
+ CM_ARRANGEICONS, "Arrange iconic windows along bottom"
+ CM_CLOSECHILDREN, "Close all open windows"
+ CM_ABOUT, "About this application"
+ CM_ELECTRON, "Paint trajectories of electrons"
+ CM_FIELD, "Electric field graph"
+ CM_TEXT, "Gas discharge parameters"
+ CM_STEP, "One electron avalanche"
+ CM_RUN, "Run electron avalanches generation"
+ CM_STOP, "Stop electron avalanches generation "
+ CM_DENSITY, "Electron density in discharge space"
+ CM_ENERGY, "Electron mean energy"
+ CM_ER, "Electron mean radial energy"
+ CM_VEL, "Electron mean velocity"
+ CM_VDR, "Electron drift velocity"
+ CM_FEL, "Elastic collision frequency"
+ CM_FEX, "Excited collision frequency"
+ CM_FIO, "Ionized collision frequency"
+ CM_EVX, "<e*vx>"
+ CM_EE, "<e*e>"
+ CM_FRE, "Electron Energy and x Coordinate Distribution Function"
+ CM_FRE1, "Electron Energy Distribution Function"
+ CM_SET, "Set x coordinate equal half of discharge x length"
+ CM_LEFT, "Decrease x coordinate"
+ CM_RIGHT, "Increase x coordinate"
+ CM_CONTENTS, "Help system contents"
+}
+
+Accelerators ACCELERATORS
+{
+ "t", CM_STEP
+ "r", CM_RUN
+ "s", CM_STOP
+ "T", CM_STEP
+ "R", CM_RUN
+ "S", CM_STOP
+ VK_F1, CM_CONTENTS, VIRTKEY
+ VK_LEFT, CM_LEFT, VIRTKEY
+ VK_RIGHT, CM_RIGHT, VIRTKEY
+ VK_UP, CM_SET, VIRTKEY
+ VK_DOWN, CM_SET, VIRTKEY
+}

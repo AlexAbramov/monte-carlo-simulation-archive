@@ -1,0 +1,18 @@
+
+[OPTIONS]
+ERRORLOG=ELECTRON.ERR
+COMPRESS=HIGH
+CONTENTS=Contents
+TITLE=Electron Avalanches in Helium Discharge
+CITATION=Alexander Abramov
+ICON=myapp.ico
+COPYRIGHT=(C) 1997-2001
+OLDKEYPHRASE=NO
+[WINDOWS]
+main="Electron Avalanches in Helium Discharge",,0,,(230,255,255),0
+
+[FILES]
+ELECTRON.RTF
+
+[MAP]
+#include <CONTEXT.H>

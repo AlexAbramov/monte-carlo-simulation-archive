@@ -1,0 +1,3 @@
+#define CM_EDIT		 	204
+#define CM_VIEW		 	205
+
