@@ -1,0 +1,28 @@
+#define CM_ELECTRON	100
+#define CM_TEXT	   102
+#define CM_ABOUT     103
+#define CM_STEP		104
+#define CM_RUN	      105
+#define CM_STOP      106
+#define CM_ALL       107
+
+#define CM_ENERGY	200
+#define CM_VDR		201
+#define CM_EVX		202
+#define CM_FIO		203
+#define CM_FEX		204
+#define CM_ALLSTAT 205
+
+#define CM_FRE		300
+#define CM_FRE1 	301
+#define CM_LEFT 	302
+#define CM_RIGHT 	303
+#define CM_SET 	304
+
+#define ID_TIMER     400
+#define TIMER_RATE   100
+
+#include<owl\editfile.rh>
+#include<owl\window.rh>
+#include<owl\mdi.rh>
+#include<owl\statusba.rh>
