@@ -1,0 +1,148 @@
+#include "myapp.rh"
+
+Menu MENU
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New", CM_FILENEW
+  MENUITEM "&Open...", CM_FILEOPEN
+  MENUITEM "&Save", CM_FILESAVE
+  MENUITEM "Save &As...", CM_FILESAVEAS
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit\tAlt+F4", CM_EXIT
+ }
+ MENUITEM SEPARATOR
+
+ POPUP "&Visual"
+ {
+  MENUITEM "&Electron tracks", CM_ELECTRON
+  MENUITEM "Electric &field", CM_FIELD
+  MENUITEM "&Text info", CM_TEXT
+  MENUITEM SEPARATOR
+  MENUITEM "&All", CM_ALL
+ }
+ MENUITEM SEPARATOR
+
+ POPUP "Statisti&c"
+ {
+  MENUITEM "&Energy", CM_ENERGY
+  MENUITEM "&Drift velocity", CM_VDR
+  MENUITEM "<e*&vx>", CM_EVX
+  MENUITEM "E&xcited frequance", CM_FEX
+  MENUITEM "&Ionizing frequance", CM_FIO
+  MENUITEM SEPARATOR
+  MENUITEM "&All", CM_ALLSTAT
+ }
+ MENUITEM SEPARATOR
+
+ POPUP "&Distribution"
+ {
+  MENUITEM "f(e,&x)", CM_FRE
+  MENUITEM "f(&e)", CM_FRE1
+  MENUITEM "In&crease x", CM_RIGHT
+  MENUITEM "&Set x", CM_SET
+  MENUITEM "&Decrease x", CM_LEFT
+ }
+ MENUITEM SEPARATOR
+
+ POPUP "&Window"
+ {
+  MENUITEM "&Cascade", CM_CASCADECHILDREN
+  MENUITEM "&Tile", CM_TILECHILDREN
+  MENUITEM "Arrange &Icons", CM_ARRANGEICONS
+  MENUITEM "C&lose All", CM_CLOSECHILDREN
+ }
+ MENUITEM SEPARATOR
+
+ POPUP "&Evolution"
+ {
+  MENUITEM "S&tep", CM_STEP
+  MENUITEM "&Run", CM_RUN
+  MENUITEM "&Stop", CM_STOP
+ }
+ MENUITEM SEPARATOR
+
+ MENUITEM "&About...", CM_ABOUT
+ MENUITEM SEPARATOR
+
+ MENUITEM "E&xit", CM_EXIT
+}
+
+CM_FILENEW BITMAP "new.bmp"
+CM_FILEOPEN BITMAP "open.bmp"
+CM_FILESAVE BITMAP "save.bmp"
+CM_STEP BITMAP "step.bmp"
+CM_RUN BITMAP "run.bmp"
+CM_STOP BITMAP "stop.bmp"
+CM_LEFT BITMAP "left.bmp"
+CM_RIGHT BITMAP "right.bmp"
+CM_SET BITMAP "set.bmp"
+
+Doc ICON "mdichild.ico"
+App ICON "myapp.ico"
+
+About DIALOG 15, 18, 164, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "          About this application"
+FONT 10, "System"
+{
+ DEFPUSHBUTTON "Ok", IDOK, 57, 93, 50, 14
+ CTEXT "Rostov-on-Don State University ", -1, 12, 57, 139, 8
+ CTEXT "Electron avalanches in gas discharge", -1, 12, 31, 139, 8
+ CTEXT "Created by postgraduate Abramov A.A.", -1, 13, 44, 138, 8
+ CTEXT "Physical faculty (1997)", -1, 12, 70, 139, 8
+ ICON "App", -1, 75, 6, 13, 13
+ CONTROL "", -1, "BorShade", BSS_GROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 10, 25, 143, 60
+ CONTROL "", -1, "BorShade", BSS_GROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 73, 4, 17, 17
+}
+
+STRINGTABLE
+{
+// -1, "File/document operations"
+ CM_FILENEW, "Create a new document"
+ CM_FILEOPEN, "Open an existing document"
+// CM_FILECLOSE, "Close this document"
+ CM_FILESAVE, "Save this document"
+ CM_FILESAVEAS, "Save this document under a new name"
+ CM_EXIT, "Exit this application"
+
+// CM_CASCADECHILDREN -1, "Window arrangement and selection"
+ CM_CASCADECHILDREN, "Cascade open windows"
+ CM_TILECHILDREN, "Tile open windows"
+ CM_ARRANGEICONS, "Arrange iconic windows along bottom"
+ CM_CLOSECHILDREN, "Close all open windows"
+
+ CM_ABOUT, "About this application"
+
+ // CM_ELECTRON -1, "Trace electrons, view discharge configuration data"
+ CM_ELECTRON, "Electron trajectories painting"
+ CM_FIELD, "Electric field graph"
+ CM_TEXT, "Gase discharge parameters"
+ CM_STEP, "One electron avalanche"
+ CM_RUN, "Run electron avalanches generation"
+ CM_STOP, "Stop electron avalanches generation "
+ CM_ALL, "View all windows"
+
+ // CM_ENERGY -1, "Electron ansamble parameters statistics"
+ CM_ENERGY, "Electron mean energy"
+ CM_VDR, "Electron drift velocity"
+ CM_FEX, "Excited collision frequance"
+ CM_FIO, "Ionizing collision frequance"
+ CM_EVX, "<e*vx>"
+ CM_ALLSTAT, "View all windows"
+
+ // CM_FRE -1, "Electron energy distribution function"
+ CM_FRE, "f(energy,x_coord)"
+ CM_FRE1, "f(energy)"
+ CM_SET, "Set x_coord to visual energy distribution function"
+ CM_LEFT, "Decrease x_coord"
+ CM_RIGHT, "Increase x_coord"
+}
+
+Menu ACCELERATORS
+{
+ "t", CM_STEP, VIRTKEY, ALT
+ "r", CM_RUN, VIRTKEY, ALT
+ "s", CM_STOP, VIRTKEY, ALT
+}

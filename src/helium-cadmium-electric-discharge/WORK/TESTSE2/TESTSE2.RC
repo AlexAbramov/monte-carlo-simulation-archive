@@ -1,0 +1,25 @@
+#include <owl\window.rh>
+#include "testse2.rh"
+
+ID_MENU MENU 
+{
+ POPUP "&Sequations"
+ {
+  MENUITEM "Elastic", CM_SELAS
+  MENUITEM "Excited", CM_SEX
+  MENUITEM "Ionising", CM_SION
+  MENUITEM "Total", CM_STOT
+  MENUITEM "Ftot", CM_FTOT
+  MENUITEM "Ftot1", CM_FTOT1
+  MENUITEM SEPARATOR
+  MENUITEM "Exit", CM_EXIT
+ }
+
+ POPUP "&Differencial"
+ {
+  MENUITEM "Elastic", CM_SPELAS
+  MENUITEM "Excited", CM_SPEX
+  MENUITEM "Ionising", CM_SPION
+ }
+}
+
