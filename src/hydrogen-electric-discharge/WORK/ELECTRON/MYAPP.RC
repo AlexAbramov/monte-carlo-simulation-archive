@@ -1,0 +1,166 @@
+#include "myapp.rh"
+
+Menu1 MENU
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New", CM_FILENEW
+  MENUITEM "&Open...", CM_FILEOPEN
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit\tAlt+F4", CM_EXIT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Help"
+ {
+  MENUITEM "&Contents", CM_CONTENTS
+  MENUITEM "&About", CM_ABOUT
+ }
+}
+
+Menu MENU 
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New", CM_FILENEW
+  MENUITEM "&Open...", CM_FILEOPEN
+  MENUITEM "&Save", CM_FILESAVE, GRAYED
+  MENUITEM "Save &As...", CM_FILESAVEAS, GRAYED
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit\tAlt+F4", CM_EXIT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Visual"
+ {
+  MENUITEM "&Electron tracks", CM_ELECTRON, CHECKED
+  MENUITEM "Electric &field", CM_FIELD
+  MENUITEM "&Parameters", CM_TEXT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "Statisti&cs"
+ {
+  MENUITEM "Electronic &density", CM_DENSITY
+  MENUITEM "Vel&ocity", CM_VEL
+  MENUITEM "Dri&ft velocity", CM_VDR
+  MENUITEM "E&nergy", CM_ENERGY
+  MENUITEM "&Radial energy", CM_ER
+  MENUITEM "<e*&vx>", CM_EVX
+  MENUITEM "<e*&e>", CM_EE
+  MENUITEM "E&lastic frequency", CM_FEL
+  MENUITEM "E&xcited frequency", CM_FEX
+  MENUITEM "&Ionized frequency", CM_FIO
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Distribution"
+ {
+  MENUITEM "f(e,&x)", CM_FRE
+  MENUITEM "f(&e)", CM_FRE1
+  MENUITEM "In&crease x", CM_RIGHT
+  MENUITEM "&Set x", CM_SET
+  MENUITEM "&Decrease x", CM_LEFT
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Window"
+ {
+  MENUITEM "&Cascade", CM_CASCADECHILDREN
+  MENUITEM "&Tile", CM_TILECHILDREN
+  MENUITEM "Arrange &Icons", CM_ARRANGEICONS
+  MENUITEM "C&lose All", CM_CLOSECHILDREN
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Evolution"
+ {
+  MENUITEM "S&tep", CM_STEP
+  MENUITEM "&Run", CM_RUN
+  MENUITEM "&Stop", CM_STOP
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Help"
+ {
+  MENUITEM "&Contents", CM_CONTENTS
+  MENUITEM "&About", CM_ABOUT
+ }
+
+}
+
+CM_FILENEW BITMAP "new.bmp"
+CM_FILEOPEN BITMAP "open.bmp"
+CM_FILESAVE BITMAP "save.bmp"
+CM_STEP BITMAP "step.bmp"
+CM_RUN BITMAP "run.bmp"
+CM_STOP BITMAP "stop.bmp"
+CM_LEFT BITMAP "left.bmp"
+CM_RIGHT BITMAP "right.bmp"
+CM_SET BITMAP "set.bmp"
+
+Doc ICON "mdichild.ico"
+App ICON "myapp.ico"
+
+About DIALOG 15, 18, 164, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "          About this application"
+FONT 10, "System"
+{
+ DEFPUSHBUTTON "Ok", IDOK, 57, 93, 50, 14
+ CTEXT "Rostov-on-Don State University ", -1, 12, 57, 139, 8
+ CTEXT "Electron avalanches in hydrogen electric discharge", -1, 12, 31, 139, 8
+ CTEXT "Created by postgraduate Abramov A.A.", -1, 13, 44, 138, 8
+ CTEXT "Physical faculty (1997)", -1, 12, 70, 139, 8
+ ICON "App", -1, 75, 6, 13, 13
+ CONTROL "", -1, "BorShade", BSS_GROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 10, 25, 143, 60
+ CONTROL "", -1, "BorShade", BSS_GROUP | BSS_CAPTION | BSS_LEFT | WS_CHILD | WS_VISIBLE, 73, 4, 17, 17
+}
+
+STRINGTABLE
+{
+ CM_FILENEW, "Create a new document"
+ CM_FILEOPEN, "Open an existing document"
+ CM_FILESAVE, "Save this document"
+ CM_FILESAVEAS, "Save this document under a new name"
+ CM_EXIT, "Exit this application"
+ CM_CASCADECHILDREN, "Cascade open windows"
+ CM_TILECHILDREN, "Tile open windows"
+ CM_ARRANGEICONS, "Arrange iconic windows along bottom"
+ CM_CLOSECHILDREN, "Close all open windows"
+ CM_ABOUT, "About this application"
+ CM_ELECTRON, "Paint trajectories of electrons"
+ CM_FIELD, "Electric field graph"
+ CM_TEXT, "Gas discharge parameters"
+ CM_STEP, "One electron avalanche"
+ CM_RUN, "Run electron avalanches generation"
+ CM_STOP, "Stop electron avalanches generation "
+ CM_DENSITY, "Electron density in discharge space"
+ CM_ENERGY, "Electron mean energy"
+ CM_ER, "Electron mean radial energy"
+ CM_VEL, "Electron mean velocity"
+ CM_VDR, "Electron drift velocity"
+ CM_FEL, "Elastic collision frequency"
+ CM_FEX, "Excited collision frequency"
+ CM_FIO, "Ionized collision frequency"
+ CM_EVX, "<e*vx>"
+ CM_EE, "<e*e>"
+ CM_FRE, "Electron Energy and x Coordinate Distribution Function"
+ CM_FRE1, "Electron Energy Distribution Function"
+ CM_SET, "Set x coordinate equal half of discharge x length"
+ CM_LEFT, "Decrease x coordinate"
+ CM_RIGHT, "Increase x coordinate"
+ CM_CONTENTS, "Help system contents"
+}
+
+Accelerators ACCELERATORS
+{
+ "t", CM_STEP
+ "r", CM_RUN
+ "s", CM_STOP
+ "T", CM_STEP
+ "R", CM_RUN
+ "S", CM_STOP
+ VK_F1, CM_CONTENTS, VIRTKEY
+}

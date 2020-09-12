@@ -1,0 +1,10 @@
+5	5	- nx,ny
+.2	.9	- x0,x1
+.2	.8	- y0,y1
+%.1f	- formatx
+%.1f	- formaty
+100	200	- size1,size2
+
+
+
+
